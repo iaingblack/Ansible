@@ -1,3 +1,4 @@
-- name: Upgrade the OS Packages
-  ansible.builtin.apt:
-    upgrade: yes
+tasks:
+  - name: Upgrade the OS Packages
+    ansible.builtin.apt:
+      upgrade: yes
