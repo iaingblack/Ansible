@@ -1,4 +1,0 @@
-tasks:
-  - name: Upgrade the OS Packages
-    ansible.builtin.apt:
-      upgrade: yes
