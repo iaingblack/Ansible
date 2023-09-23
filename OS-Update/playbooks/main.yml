@@ -1,6 +1,7 @@
 ---
 - hosts: all
   tasks:
+    # Debian and Ubuntu
     - name: Debian and Ubuntu OS Upgrade
       ansible.builtin.apt:
         upgrade: yes
@@ -10,8 +11,7 @@
         name: qemu-guest-agent
         state: latest
       when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-
-  tasks:
+    # Archlinux
     - name: Arch Linux OS Upgrade
       community.general.pacman:
         update_cache: true
