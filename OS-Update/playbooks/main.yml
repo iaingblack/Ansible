@@ -4,3 +4,7 @@
     - name: Upgrade the OS Packages
       ansible.builtin.apt:
         upgrade: yes
+    - name: Install qemu-guest-agent
+      ansible.builtin.apt:
+        name: qemu-guest-agent
+        state: latest
